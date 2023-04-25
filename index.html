@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="images/filmstrip.png" />
+
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>TrailFlix</title>
+  </head>
+  <body>
+    <div id="app" class="app hidden">
+      <!-- <div id="app" class="app"> -->
+      <form id="form" class="form">
+        <input
+          id="input--text"
+          class="input input--text"
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Name"
+          autocomplete="off"
+        />
+        <!-- <input
+          id="input--number"
+          class="input input--number"
+          type="number"
+          placeholder="Year (opt)"
+          min="1"
+        /> -->
+        <small id="small" class="error-mesg"></small>
+        <button id="submit" style="display: none" type="submit">Search</button>
+        <div id="ld-spn" class="ld-spn hidden">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="search_results"></div>
+      </form>
+      <section id="movie" class="movie">
+        <div class="poster">
+          <img id="poster__img" class="poster__img" alt="poster" />
+        </div>
+
+        <div class="movie__details">
+          <h1 id="movie__title" class="movie__title">Title</h1>
+
+          <div class="details-container">
+            <div class="imdb">
+              <img
+                style="width: 30px"
+                class="imdb__icon"
+                src="images/imdb.png"
+                alt=""
+              />
+              <span id="imdb__rating" class="imdb__rating">0.0/10</span>
+            </div>
+
+            <div class="RottenTomatoes">
+              <img
+                style="width: 20px"
+                class="imdb__icon"
+                src="images/RT.png"
+                alt=""
+              />
+              <span id="RottenTomatoes__rating" class="RottenTomatoes__rating"
+                >0%</span
+              >
+            </div>
+
+            <!-- <span id="type" class="type">• Type</span> -->
+            <div class="duration">
+              <img
+                style="width: 20px"
+                class="duration__clock"
+                src="images/clock.png"
+                alt=""
+              />
+              <span id="duration__time" class="duration__time">0.0 min</span>
+            </div>
+
+            <div class="release">
+              <span id="releasedStatus" class="releasedStatus">status</span>
+              <span id="releasedDate" class="releasedDate">00/00/0000</span>
+            </div>
+
+            <span id="playing-now" class="playing-now hidden">
+              playing now</span
+            >
+            <span id="Genre" class="Genre"> _ / _ </span>
+          </div>
+          <div class="Plot">
+            <h2 class="Plot__title">Plot summary</h2>
+            <p id="Plot__summary" class="Plot__summary">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Excepturi est quaerat quidem repudiandae nulla voluptatibus non
+              laudantium.
+            </p>
+          </div>
+        </div>
+
+        <!-- ////////////// -->
+
+        <div id="credits" class="credits hidden">
+          <span id="credits__label" class="credits__label"></span>
+          <div id="credits__switch" class="credits__switch">
+            <img src="images/swap.png" alt="" />
+          </div>
+
+          <div id="casts" class="Performers casts"></div>
+          <div id="crews" class="Performers crews hidden"></div>
+        </div>
+        <!-- ////////////// -->
+      </section>
+
+      <!-- ************************************************************** -->
+
+      <!-- ************************************************************** -->
+
+      <section id="seat-booking" class="seat-booking">
+        <aside>
+          <span class="label">Recommended</span>
+          <div id="recommendations" class="panel recommendations"></div>
+        </aside>
+        <div class="screen">
+          <div id="slides" class="slides">
+            <div id="slides__videos" class="slides__videos"></div>
+            <div id="slides__images" class="slides__images"></div>
+          </div>
+
+          <div class="screen__remote">
+            <span
+              id="screen__videosBtn"
+              class="btn screen__videosBtn active"
+              data-title="videos"
+            ></span>
+            <span
+              id="screen__imagesBtn"
+              class="btn screen__imagesBtn"
+              data-title="images"
+            ></span>
+          </div>
+
+          <div class="dots videosDots"></div>
+          <div class="dots imagesDots hidden"></div>
+
+          <button
+            id="screen__btn--left"
+            class="screen__btn screen__btn--left"
+          ></button>
+          <button
+            id="screen__btn--right"
+            class="screen__btn screen__btn--right"
+          ></button>
+        </div>
+        <aside class="rightSide">
+          <div class="container">
+            <span id="rightLabel" class="label">Popular</span>
+            <img id="switch" class="switch" src="images/swap.png" alt="" />
+          </div>
+          <div id="popular" class="panel popular"></div>
+          <div
+            id="nowPlying&airingToday"
+            class="panel now-plying airing-today hidden"
+          ></div>
+          <div id="upcomingAndonTv" class="panel upcoming on-tv hidden"></div>
+        </aside>
+      </section>
+      <span id="appBackEnd" class="appBackEnd"> </span>
+    </div>
+
+    <!-- <img src="images/default cast.svg" alt="" /> -->
+  </body>
+</html>
